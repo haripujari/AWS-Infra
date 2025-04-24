@@ -1,2 +1,2 @@
-# AWS-Infra
-Deploy AWS resources
+# github-actions-terraform
+github-actions-terraform
