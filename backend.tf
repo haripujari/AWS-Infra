@@ -1,10 +1,12 @@
 terraform {
   backend "s3" {
-    bucket         = "my-terraform-state-bobby"
-    region         = "us-east-1"
-    key            = "s3-github-actions/terraform.tfstate"
-    encrypt = true
+    bucket = "great-name-terraform-state-2"
+    key    = "global/s3/terraform.tfstate"
+    region = "us-west-2"
+    access_key = ${{ secrets.AWS_ACCESS_KEY_ID }}
+    secret_key = ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   }
+}
   required_version = ">=0.13.0"
   required_providers {
     aws = {
